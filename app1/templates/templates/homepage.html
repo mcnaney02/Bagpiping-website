@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Hello world, this is our homepage</h1>
+    <p>
+        {% for i in mylist %}
+            <p>Hello {{i.first_name}} {{i.second_name}}</p>
+        {% endfor %}
+    </p>
+    <a href="{% url 'contact_me' %}">Contact us</a>
+{% endblock %}
